@@ -81,10 +81,10 @@
 		D7CB9FEE1B0593030040F5CD /* pitchperfect2 */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB9FF51B0593030040F5CD /* Main.storyboard */,
 				D71E85071B0D8D6B0047EF92 /* PlaySoundsViewController.swift */,
 				D7CB9FF11B0593030040F5CD /* AppDelegate.swift */,
 				D7CB9FF31B0593030040F5CD /* RecordSoundsViewController.swift */,
-				D7CB9FF51B0593030040F5CD /* Main.storyboard */,
 				D754E6651B0BC9E400D3612F /* RecordedAudio.swift */,
 				D7CB9FF81B0593030040F5CD /* Images.xcassets */,
 				D7CB9FFA1B0593030040F5CD /* LaunchScreen.xib */,
