@@ -51,7 +51,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
         var recordingName = formatter.stringFromDate(currentDateTime)+".wav"
         var pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        println(filePath)
+        
         
         ///setup audio session
         var  session = AVAudioSession.sharedInstance()
@@ -68,8 +68,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
         if(flag){
         //save recorded audio
        let  recordedAudio=RecordedAudio(filePathUrl: recorder.url, title: recorder.url.lastPathComponent)
-        recordedAudio.filePathUrl = recorder.url
-        recordedAudio.title = recorder.url.lastPathComponent
+        
             
         // move to the second screen
         self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
