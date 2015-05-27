@@ -27,7 +27,7 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c49-SZ-inq"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtR-0O-ekH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtR-0O-ekH">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="31"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -216,6 +216,16 @@
                                 <exclude reference="hhk-Q6-dsM"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="VXi-64-4el"/>
+                                <exclude reference="BtA-Wq-jgR"/>
+                                <exclude reference="EGW-69-du3"/>
+                                <exclude reference="UJG-Te-h6U"/>
+                                <exclude reference="Z9O-9Z-sY6"/>
+                                <exclude reference="ghX-YW-tBg"/>
+                                <exclude reference="iFq-Dw-leI"/>
+                                <exclude reference="mfo-A0-ps8"/>
+                                <exclude reference="wqE-ci-0KU"/>
+                                <exclude reference="xPq-NT-0a2"/>
                                 <exclude reference="6db-pi-BhZ"/>
                                 <exclude reference="Oaf-Fx-ryL"/>
                                 <exclude reference="QTR-kX-LOM"/>
@@ -230,15 +240,6 @@
                                 <exclude reference="pwO-dm-aDd"/>
                                 <exclude reference="q0c-56-JkF"/>
                                 <exclude reference="rIX-55-eaS"/>
-                                <exclude reference="BtA-Wq-jgR"/>
-                                <exclude reference="EGW-69-du3"/>
-                                <exclude reference="UJG-Te-h6U"/>
-                                <exclude reference="Z9O-9Z-sY6"/>
-                                <exclude reference="ghX-YW-tBg"/>
-                                <exclude reference="iFq-Dw-leI"/>
-                                <exclude reference="mfo-A0-ps8"/>
-                                <exclude reference="wqE-ci-0KU"/>
-                                <exclude reference="xPq-NT-0a2"/>
                                 <exclude reference="A80-Mp-eme"/>
                                 <exclude reference="U2Y-xE-RWY"/>
                                 <exclude reference="haC-B6-GbK"/>
@@ -246,7 +247,6 @@
                                 <exclude reference="9de-fz-70c"/>
                                 <exclude reference="VK1-Rx-3N7"/>
                                 <exclude reference="uyF-Gn-Nfl"/>
-                                <exclude reference="VXi-64-4el"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -258,6 +258,16 @@
                                 <include reference="hhk-Q6-dsM"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="VXi-64-4el"/>
+                                <include reference="BtA-Wq-jgR"/>
+                                <exclude reference="EGW-69-du3"/>
+                                <exclude reference="UJG-Te-h6U"/>
+                                <exclude reference="Z9O-9Z-sY6"/>
+                                <exclude reference="ghX-YW-tBg"/>
+                                <exclude reference="iFq-Dw-leI"/>
+                                <exclude reference="mfo-A0-ps8"/>
+                                <include reference="wqE-ci-0KU"/>
+                                <include reference="xPq-NT-0a2"/>
                                 <exclude reference="6db-pi-BhZ"/>
                                 <exclude reference="Oaf-Fx-ryL"/>
                                 <include reference="QTR-kX-LOM"/>
@@ -272,15 +282,6 @@
                                 <exclude reference="pwO-dm-aDd"/>
                                 <exclude reference="q0c-56-JkF"/>
                                 <include reference="rIX-55-eaS"/>
-                                <include reference="BtA-Wq-jgR"/>
-                                <exclude reference="EGW-69-du3"/>
-                                <exclude reference="UJG-Te-h6U"/>
-                                <exclude reference="Z9O-9Z-sY6"/>
-                                <exclude reference="ghX-YW-tBg"/>
-                                <exclude reference="iFq-Dw-leI"/>
-                                <exclude reference="mfo-A0-ps8"/>
-                                <include reference="wqE-ci-0KU"/>
-                                <include reference="xPq-NT-0a2"/>
                                 <exclude reference="A80-Mp-eme"/>
                                 <include reference="U2Y-xE-RWY"/>
                                 <include reference="haC-B6-GbK"/>
@@ -288,7 +289,6 @@
                                 <exclude reference="9de-fz-70c"/>
                                 <exclude reference="VK1-Rx-3N7"/>
                                 <exclude reference="uyF-Gn-Nfl"/>
-                                <exclude reference="VXi-64-4el"/>
                             </mask>
                         </variation>
                     </view>

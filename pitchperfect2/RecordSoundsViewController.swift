@@ -21,6 +21,7 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
+            updateUI(false)
         }
         
         override func didReceiveMemoryWarning() {
@@ -28,16 +29,8 @@
             // Dispose of any resources that can be recreated.
         }
         
-        override func viewWillAppear(animated: Bool) {
-            //hide stop button
-            stopButton.hidden = true
-            recordButton.enabled = true
-        }
-        
         @IBAction func recordAudio(sender: UIButton) {
-            recordingInProgress.hidden = false
-            stopButton.hidden = false
-            recordButton.enabled = false
+            updateUI(true)
             
             let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
             
@@ -47,7 +40,6 @@
             var recordingName = formatter.stringFromDate(currentDateTime)+".wav"
             var pathArray = [dirPath, recordingName]
             let filePath = NSURL.fileURLWithPathComponents(pathArray)
-            
             
             ///setup audio session
             var  session = AVAudioSession.sharedInstance()
@@ -88,11 +80,26 @@
         }
         
         @IBAction func stopAudio(sender: UIButton) {
-            recordingInProgress.hidden = true
+            updateUI(false)
+            
             // stop recording the users voice
             audioRecorder.stop()
             var audioSession = AVAudioSession.sharedInstance();
             audioSession.setActive(false, error: nil)
+        }
+        
+        func updateUI(currentlyRecording: Bool) {
+            if (currentlyRecording) {
+                //recording
+                recordingInProgress.text = "Recording"
+                stopButton.hidden = false
+                recordButton.enabled = false
+            } else {
+                //not recording
+                recordingInProgress.text = "Tap to Record"
+                stopButton.hidden = true
+                recordButton.enabled = true
+            }
         }
     }
     
