@@ -55,6 +55,15 @@
                                     <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Xn-Uy-bXd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording Unsuccesful" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHQ-n7-1vA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="111" y="443" width="179" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.072482319330000003" green="0.50335525260000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -71,6 +80,7 @@
                                 <exclude reference="Jfl-mR-Y8a"/>
                                 <exclude reference="VtR-0O-ekH"/>
                                 <exclude reference="hj1-ig-WWO"/>
+                                <exclude reference="uHQ-n7-1vA"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Rks-zU-UZj"/>
@@ -87,6 +97,7 @@
                                 <include reference="Jfl-mR-Y8a"/>
                                 <include reference="VtR-0O-ekH"/>
                                 <include reference="hj1-ig-WWO"/>
+                                <include reference="uHQ-n7-1vA"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Rks-zU-UZj"/>
@@ -103,6 +114,7 @@
                     <connections>
                         <outlet property="recordButton" destination="Jfl-mR-Y8a" id="XWw-8y-R7T"/>
                         <outlet property="recordingInProgress" destination="VtR-0O-ekH" id="HuB-Gu-sB1"/>
+                        <outlet property="recordingUnsucessful" destination="uHQ-n7-1vA" id="Fj4-HH-VUM"/>
                         <outlet property="stopButton" destination="hj1-ig-WWO" id="XNI-ZC-DRP"/>
                         <segue destination="GiB-99-nZS" kind="show" identifier="stopRecording" id="Uaz-po-0aT"/>
                     </connections>
@@ -148,15 +160,6 @@
                                     <action selector="playChipmunkAudio:" destination="GiB-99-nZS" eventType="touchUpInside" id="KGc-KK-2K9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyL-2Y-ykW">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="darth">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playDarthvaderAudio:" destination="GiB-99-nZS" eventType="touchUpInside" id="7Fw-e8-Mu2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhk-Q6-dsM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop@2x~iphone">
@@ -164,6 +167,15 @@
                                 </state>
                                 <connections>
                                     <action selector="stopSound:" destination="GiB-99-nZS" eventType="touchUpInside" id="Ibj-GI-s6B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyL-2Y-ykW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darth">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="GiB-99-nZS" eventType="touchUpInside" id="7Fw-e8-Mu2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,8 +224,8 @@
                                 <exclude reference="Vsm-mi-bxc"/>
                                 <exclude reference="6T3-ps-65d"/>
                                 <exclude reference="YbM-uG-egz"/>
-                                <exclude reference="nyL-2Y-ykW"/>
                                 <exclude reference="hhk-Q6-dsM"/>
+                                <exclude reference="nyL-2Y-ykW"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="VXi-64-4el"/>
@@ -254,8 +266,8 @@
                                 <include reference="Vsm-mi-bxc"/>
                                 <include reference="6T3-ps-65d"/>
                                 <include reference="YbM-uG-egz"/>
-                                <include reference="nyL-2Y-ykW"/>
                                 <include reference="hhk-Q6-dsM"/>
+                                <include reference="nyL-2Y-ykW"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="VXi-64-4el"/>

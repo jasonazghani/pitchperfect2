@@ -14,6 +14,7 @@
         @IBOutlet weak var recordButton: UIButton!
         @IBOutlet weak var recordingInProgress: UILabel!
         @IBOutlet weak var stopButton: UIButton!
+        @IBOutlet weak var recordingUnsucessful: UILabel!
         
         var audioRecorder:AVAudioRecorder!
         var recordedAudio: RecordedAudio!
@@ -22,6 +23,8 @@
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
             updateUI(false)
+            
+            recordingUnsucessful.hidden = true
         }
         
         override func didReceiveMemoryWarning() {
@@ -61,10 +64,10 @@
                 // move to the second screen
                 self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
             }else{
-                println("recording was not successfull")
                 recordButton.enabled = true
                 stopButton.hidden = true
-                recordingInProgress.hidden=true
+                recordingUnsucessful.hidden = false
+                recordingInProgress.hidden = true
                 
             }
         }
@@ -93,6 +96,7 @@
                 //recording
                 recordingInProgress.text = "Recording"
                 stopButton.hidden = false
+                recordingUnsucessful.hidden = true
                 recordButton.enabled = false
             } else {
                 //not recording
