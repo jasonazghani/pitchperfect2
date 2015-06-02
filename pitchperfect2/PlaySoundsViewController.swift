@@ -47,11 +47,9 @@ class PlaySoundsViewController: UIViewController {
     
     
     func playAudioWithVariableSpeed(speed: Float) {
-        audioPlayer.stop()
         audioPlayer.rate = speed
         audioPlayer.currentTime = 0
         audioPlayer.play()
-        audioEngine.stop()
         audioEngine.reset()
         
     }
@@ -67,8 +65,6 @@ class PlaySoundsViewController: UIViewController {
     
     
     func playAudioWithVariablePitch (pitch: Float ) {
-        audioPlayer.stop()
-        audioEngine.stop()
         audioEngine.reset()
         
         
@@ -92,6 +88,7 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func stopSound(sender: UIButton) {
         audioPlayer.stop()
+        audioEngine.stop()
     }
     
     
@@ -106,15 +103,5 @@ class PlaySoundsViewController: UIViewController {
 }
 
 
-
-/*
-// MARK: - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-// Get the new view controller using segue.destinationViewController.
-// Pass the selected object to the new view controller.
-}
-    */
 
 
